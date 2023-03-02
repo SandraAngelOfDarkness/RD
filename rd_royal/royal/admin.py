@@ -14,7 +14,7 @@ class FotoAdmin(admin.ModelAdmin):
 
 class BlogAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_date')
-    list_filter = ('created_date', 'update_date')
+    list_filter = ['created_date', 'update_date']
     search_fields = ('title', 'content')
 
 class ContactAdmin(admin.ModelAdmin):
