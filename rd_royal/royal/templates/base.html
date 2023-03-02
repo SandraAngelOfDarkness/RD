@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static i18n %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ROYAL DIAMOND{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'ROYAL/css/style.css' %}">
+</head>
+<body>
+    <header>{% block header %}
+        <span class="logo">ROYAL DIAMOND</span>
+        <ul>
+            <li><a href="{% url "index" %}">Apie</li>
+            <li><a href="{% url "index" %}">Video</li>
+            <li><a href="{% url "index" %}">Foto</li>
+            <li><a href="{% url "index" %}">Blog'as</li>
+            <li><a href="{% url "index" %}">Kontaktai</li>
+        </ul>
+        {% endblock header %}</header>
+    <main>{% block content %}{% endblock content %}</main>
+    <footer>{% block footer %}© 2023 All rights reserved ROYAL DIAMOND{% endblock footer %}</footer>
+</body>
+</html>

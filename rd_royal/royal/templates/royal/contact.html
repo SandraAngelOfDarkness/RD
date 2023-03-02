@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block  %}
+    <h1>Susisiekite</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Vardas:</label>
+        <input type="text" name="name"><br>
+        <label for="email">El.paštas:</label>
+        <input type="email" name="email"><br>
+        <label for="subject">Tema:</label>
+        <input type="text" name="subject"><br>
+        <label for="message">Žinutė:</label>
+        <textarea name="message"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock  %}
