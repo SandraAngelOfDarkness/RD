@@ -4,14 +4,13 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 62px calc(100vh - 112px) 50px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px calc(100vh - 100px) 50px;
     grid-template-areas:
         "header"
         "main"
         "footer"
-        ;
-    font-family: 'Roboto';
+    ;
 }
 
 a {
@@ -31,6 +30,7 @@ header {
 }
 
 main {
+    grid-area: main;
     width: 100%;
     max-width: 1200px;
     margin: auto;
@@ -58,7 +58,7 @@ main.container, footer.container {
 header ul {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding-inline-start: 0;
     margin: 8px 0;
     gap: 16px;
@@ -67,4 +67,16 @@ header ul {
 
 header ul li {
     display: inline-block;
+}
+
+header ul li a {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    flex-direction: row;
 }

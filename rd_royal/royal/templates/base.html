@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="{% static 'ROYAL/css/style.css' %}">
 </head>
 <body>
-    <header>{% block header %}
-        <span class="logo">ROYAL DIAMOND</span>
+    <header>
         <ul>
-            <li><a href="{% url "index" %}">Apie</li>
-            <li><a href="{% url "index" %}">Video</li>
-            <li><a href="{% url "index" %}">Foto</li>
-            <li><a href="{% url "index" %}">Blog'as</li>
-            <li><a href="{% url "index" %}">Kontaktai</li>
+            <li><a href="{% url "index" %}">Apie mane</a></li>
+            <li><a href="{% url "index" %}">Video</a></li>
+            <li><a href="{% url "index" %}">Foto</a></li>
+            <li><a href="{% url "index" %}">Blog'as</a></li>
+            <li><a href="{% url "index" %}">Kontaktai</a></li>
         </ul>
-        {% endblock header %}</header>
+    </header>
     <main>{% block content %}{% endblock content %}</main>
-    <footer>{% block footer %}© 2023 All rights reserved ROYAL DIAMOND{% endblock footer %}</footer>
+    <footer class="layout-item">
+        <p>&copy; 2023 All rights reserved ROYAL DIAMOND</p>
+    </footer>
 </body>
 </html>

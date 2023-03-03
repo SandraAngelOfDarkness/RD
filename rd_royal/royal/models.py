@@ -18,7 +18,7 @@ class Video(models.Model):
     published_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.video_file
+        return str(self.video_file)
     
     class Meta:
         verbose_name = ("Video")
@@ -26,11 +26,11 @@ class Video(models.Model):
 class Foto(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    image = models.FileField(upload_to='photos/')
+    image_field = models.FileField(upload_to='photos/')
     published_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.image
+        return str(self.image_field)
     
     class Meta:
         verbose_name = ("Foto")

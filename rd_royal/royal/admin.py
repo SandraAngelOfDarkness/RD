@@ -7,10 +7,18 @@ class AboutAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'published_date')
 
 class VideoAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'published_date')
+    list_display = ('title', 'description', 'video_file', 'published_date')
+
+    def video_field(self, obj):
+        return obj.video.url if obj.video else ''
+    video_field.short_description = 'Video'
 
 class FotoAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'published_date')
+    list_display = ('title', 'description', 'image_field', 'published_date')
+
+    def image_field(self, obj):
+        return obj.photo.url if obj.photo else ''
+    image_field.short_description = 'Photo'
 
 class BlogAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_date')
