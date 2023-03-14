@@ -5,6 +5,7 @@ from .models import About, Video, Foto, Blog, Contact
 
 class AboutAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'published_date')
+    list_display_links = ('content', )
 
 class VideoAdmin(admin.ModelAdmin):
     list_display = ('title', 'description', 'video_file', 'published_date')
