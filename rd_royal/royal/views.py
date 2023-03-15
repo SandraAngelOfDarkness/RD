@@ -6,11 +6,11 @@ from . import models
 def index(request):
     return render(request, "royal/index.html")
 
-def contat(request):
+def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')
-        message = request.POST.GET('message')
+        message = request.POST.get('message')
         Contact.objects.create(name=name, email=email, subject=subject, message=message)
     return render(render, 'contact.html')
