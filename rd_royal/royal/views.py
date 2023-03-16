@@ -6,6 +6,12 @@ from . import models
 def index(request):
     return render(request, "royal/index.html")
 
+def about(request):
+    about = models.About.objects.all()
+    return render(request, 'royal/about.html', {
+        'about': about,
+    })
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')
