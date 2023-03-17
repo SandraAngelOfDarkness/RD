@@ -8,9 +8,8 @@ def index(request):
 
 def about(request):
     about = models.About.objects.all()
-    return render(request, 'royal/about.html', {
-        'about': about,
-    })
+    context = {'about': about}
+    return render(request, 'royal/about.html', context)
 
 def contact(request):
     if request.method == 'POST':
