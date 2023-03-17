@@ -4,7 +4,7 @@ from .models import About, Video, Foto, Blog, Contact
 from . import models
 
 def index(request):
-    return render(request, "royal/index.html")
+    return render(request, "royal/index.html", )
 
 def about(request):
     about = models.About.objects.all()
@@ -19,4 +19,4 @@ def contact(request):
         subject = request.POST.get('subject')
         message = request.POST.get('message')
         Contact.objects.create(name=name, email=email, subject=subject, message=message)
-    return render(render, 'contact.html')
+    return render(request, 'royal/contact.html')
