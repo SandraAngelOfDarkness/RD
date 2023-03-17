@@ -11,6 +11,14 @@ def about(request):
     context = {'about': about}
     return render(request, 'royal/about.html', context)
 
+def video(request):
+    video = models.Video.objects.all()
+    return render(request, 'royal/video.html', {'video': video})
+
+def foto(request):
+    foto = models.Foto.objects.all()
+    return render(request, 'royal/foto.html', {'foto': foto})
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')

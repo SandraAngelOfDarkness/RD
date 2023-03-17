@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Nuotraukos</h1>
+    {% for photo in photos %}
+        <div>
+            <h2>{{ photo.title }}</h2>
+            <p>{{ photo.description }}</p>
+            <img src="{{ photo.image_field.url }}" alt="{{ photo.title }}">
+            <p>Paskelbta: {{ photo.published_date|date:"F j, Y" }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
