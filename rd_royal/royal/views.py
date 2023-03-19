@@ -24,7 +24,7 @@ def blog(request):
     context = {
         'blog_posts': blog_posts
     }
-    return render(request, 'blog/blog.html', context)
+    return render(request, 'royal/blog.html', context)
 
 def contact(request):
     if request.method == 'POST':
