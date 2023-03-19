@@ -19,6 +19,13 @@ def foto(request):
     foto = models.Foto.objects.all()
     return render(request, 'royal/foto.html', {'foto': foto})
 
+def blog(request):
+    blog_posts = models.Blog.objects.all()
+    context = {
+        'blog_posts': blog_posts
+    }
+    return render(request, 'blog/blog.html', context)
+
 def contact(request):
     if request.method == 'POST':
         name = request.POST.get('name')

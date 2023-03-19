@@ -18,7 +18,7 @@ class Video(models.Model):
     published_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return str(self.video_file)
     
     class Meta:
         verbose_name = ("Video")
