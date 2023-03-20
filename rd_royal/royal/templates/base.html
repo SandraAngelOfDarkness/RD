@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ROYAL DIAMOND{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'ROYAL/css/style.css' %}">
+    <style>{% block style %}{% endblock style %}</style>
 </head>
 <body>
     <header>
         <ul>
+            <li><a href="{% url "index" %}">Pradžia</a></li>
             <li><a href="{% url "about" %}">Apie mane</a></li>
             <li><a href="{% url "video" %}">Video</a></li>
             <li><a href="{% url "foto" %}">Nuotraukos</a></li>

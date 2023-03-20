@@ -1,10 +1,17 @@
 {% extends 'base.html' %}
 
 {% block title %}About in {{ block.super }}{% endblock title %}
+
 {% block content %}
-{% for about_object in about %}
-  <h1>{{ about_object.title }}</h1>
-  <p>{{ about_object.content }}</p>
-  <p>Paskelbta: {{ about_object.published_date }}</p>
-{% endfor %}
+    {% for about_object in about %}
+        <h1>{{ about_object.title }}</h1>
+        <p>{{ about_object.content|linebreaksbr }}</p>
+        <p>Paskelbta: {{ about_object.published_date }}</p>
+    {% endfor %}
 {% endblock content %}
+
+{% block style %}
+    p {
+        text-align: left;
+    }
+{% endblock style %}
