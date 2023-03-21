@@ -5,9 +5,24 @@
   {% for post in blog_posts %}
     <div>
       <h2>{{ post.title }}</h2>
-      <p>{{ post.content }}</p>
+      <h3>{{ post.content }}</h3>
       <p>Sukurta: {{ post.created_date }}</p>
       <p>Paskutinis atnaujinimas: {{ post.update_date }}</p>
     </div>
   {% endfor %}
 {% endblock %}
+
+{% block style %}
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    p {
+      text-align: center;
+    }
+{% endblock style %}
