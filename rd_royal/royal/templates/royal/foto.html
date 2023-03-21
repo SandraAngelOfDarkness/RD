@@ -6,7 +6,7 @@
         <div>
             <h2>{{ photo.title }}</h2>
             <p>{{ photo.description }}</p>
-            <img src="{{ photo.image_field.url }}" alt="{{ photo.title }}">
+            <img class="photo" src="{{ photo.image_field.url }}" alt="{{ photo.title }}">
             <p>Paskelbta: {{ photo.published_date|date:"F j, Y" }}</p>
         </div>
     {% endfor %}

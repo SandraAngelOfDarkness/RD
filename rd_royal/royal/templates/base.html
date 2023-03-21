@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ROYAL DIAMOND{% endblock title %}</title>
-    <link rel="stylesheet" href="{% static 'ROYAL/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'ROYAL/css/style.css' %}">
     <style>{% block style %}{% endblock style %}</style>
 </head>
 <body>
+    <div class="container">
     <header>
         <ul>
             <li><a href="{% url "index" %}">Pradžia</a></li>
@@ -18,11 +19,14 @@
             <li><a href="{% url "foto" %}">Nuotraukos</a></li>
             <li><a href="{% url "blog" %}">Blog'as</a></li>
             <li><a href="{% url "contact" %}">Kontaktai</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100089720002478" target="_blank">
+                <img src="https://rd_royal/media/photos/fb_logo.png"></a></li>
         </ul>
     </header>
     <main>{% block content %}{% endblock content %}</main>
     <footer class="layout-item">
         <p>&copy; 2023 All rights reserved ROYAL DIAMOND & ANGEL OF DARKNESS team</p>
     </footer>
+    </div>
 </body>
 </html>
