@@ -4,14 +4,14 @@
     <h1>Susisiekite</h1>
     <form method="post">
         {% csrf_token %}
-        <label for="name">Vardas:</label>
-        <input type="text" name="name"><br>
-        <label for="email">El.paštas:</label>
-        <input type="email" name="email"><br>
-        <label for="subject">Tema:</label>
-        <input type="text" name="subject"><br>
-        <label for="message">Žinutė:</label>
-        <textarea name="message"></textarea><br>
+        <label for="name" style="display: inline-block; width: 100px;">Vardas:</label>
+        <input type="text" name="name" style="display: inline-block;"><br>
+        <label for="email" style="display: inline-block; width: 100px;">El.paštas:</label>
+        <input type="email" name="email" style="display: inline-block;"><br>
+        <label for="subject" style="display: inline-block; width: 100px;">Tema:</label>
+        <input type="text" name="subject" style="display: inline-block;"><br>
+        <label for="message" style="display: inline-block; width: 100px;">Žinutė:</label>
+        <textarea name="message" style="display: inline-block;"></textarea><br>
         <input type="submit" value="Siųsti">
     </form>
 {% endblock %}
