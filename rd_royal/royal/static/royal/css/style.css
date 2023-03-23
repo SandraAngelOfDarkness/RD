@@ -75,11 +75,13 @@ header ul li a {
 
 h1 {
     text-align: center;
+    text-align: top;
 }
 
 p {
     flex-direction: row;
 }
+
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -125,4 +127,20 @@ p {
 .photo-large.active {
     opacity: 1;
     pointer-events: auto;
+}
+
+@media screen and (min-width:481px) and (max-width:920px) {
+    body {
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 50px calc(100vh - 150px) 100px;
+    }
+    h1 {
+        font-size: 250%;
+    }
+    h2 {
+        font-size: 175%;
+    }
+    h3 {
+        font-size: 140%;
+    }
 }
