@@ -5,7 +5,7 @@
     <div class="container">
         <div class="h2-wrapper">
             <h2 class="h2-left">Nuskink dieną</h2>
-            <img class="h2-image" src="https://example.com/path/to/rd_royal/media/photos/diamond.jpg" alt="Diamond">
+            {% load static %} <img src="{% static "media/photos/diamond.jpg" %}" alt="home" />
             <h2 class="h2-right">Jeigu yra noras - atsiras 100 galimybių, jeigu noro nėra - atsiras 100 priežasčių</h2>
         </div>
     </div>
