@@ -5,13 +5,66 @@
     <div class="photo-grid">
         {% for photo in foto %}
             <div class="photo-item">
-                <h2>{{ photo.title }}</h2>
-                <p>{{ photo.description }}</p>
                 <a href="#" class="photo-link" data-lanrge-url="{{ photo.image_field.url}}">
-                    <img src="{{ photo.image_field.url }}" alt="{{ photo.title }}" class="photo-image">
+                    <img src="{{ photo.image_field.url }}" alt="{{ photo.title }}" class="photo-image" style="width: 300px; height: 200px;">
                 </a>
-                <p>Paskelbta: {{ photo.published_date|date:"F j, Y" }}</p>
+                <div class="photo-details">
+                    <h2>{{ photo.title }}</h2>
+                    <p>{{ photo.description }}</p>
+                    <p>Paskelbta: {{ photo.published_date|date:"F j, Y" }}</p>
+                </div>
             </div>
         {% endfor %}
     </div>
 {% endblock %}
+
+{% block style %}
+<style>
+    .photo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .photo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width:300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0, 2);
+    }
+
+    .photo-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .photo-details {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .photo-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .photo-description {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .photo-date {
+        font-size: 16px;
+        color:#666666;
+    }
+
+</style>
+
+{% endblock style %}
