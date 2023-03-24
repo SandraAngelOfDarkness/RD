@@ -42,6 +42,9 @@ footer {
     width: 100%;
     background-color: red;
     border-top: 2px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
 }
 
 header.container, main.container, footer.container {
