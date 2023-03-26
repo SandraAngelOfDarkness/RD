@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 from .models import About, Video, Foto, Blog, Contact
 from . import models
 
@@ -12,8 +11,8 @@ def about(request):
     return render(request, 'royal/about.html', context)
 
 def video(request):
-    video = models.Video.objects.all()
-    return render(request, 'royal/video.html', {'video': video})
+    videos = models.Video.objects.all()
+    return render(request, 'royal/video.html', {'videos': videos})
 
 def foto(request):
     foto = models.Foto.objects.all()
